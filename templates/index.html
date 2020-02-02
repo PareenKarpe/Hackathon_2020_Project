@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Custom CSS -->
+<!--	<link rel="stylesheet" type="text/css" href="styles/custom.css">-->
+	<link type="text/css" href="{{ url_for('static', filename='styles/custom.css') }}" rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+<!--    <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">	-->
+	<link type="text/css" href="{{ url_for('static', filename='bootstrap-4.4.1-dist/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <title>Index</title>
+  </head>
+  <body>
+	<form action = "{{ url_for('addAccount') }}" method = "POST">
+		<div class="container register">
+			<div class="row h-100">
+				<div class="col-md-3 register-left my-auto">
+					<img src="{{ url_for('static', filename='images/logo_color.png') }}" alt=""/>
+					<h3>Welcome</h3>
+					<p>You are 30 seconds away forming the best team for your project!</p>
+				</div>
+				<div class="col-md-9 register-right">
+					<div id="home">
+						<h3 class="register-heading">Getting started with project requirements</h3>
+						<div class="row register-form mx-auto">
+							<div class="col-md-6 mx-auto">
+								<label for="formGroupExampleInput1">Enter number of team members required:</label>
+								<div class="form-group row">
+									<label for="formGroupExampleInput2" class="col-md-4 col-form-label">Developer</label>
+									<div class="col-md-8">
+										<input type="text" class="form-control" id="formGroupExampleInput2" name="developer">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="formGroupExampleInput3" class="col-md-4 col-form-label">Analyst</label>
+									<div class="col-md-8">
+										<input type="text" class="form-control" id="formGroupExampleInput3" name="analyst">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="formGroupExampleInput4" class="col-md-4 col-form-label">QA</label>
+									<div class="col-md-8">
+										<input type="text" class="form-control" id="formGroupExampleInput4" name="qa">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="formGroupExampleInput5" class="col-md-4 col-form-label">Architect</label>
+									<div class="col-md-8">
+										<input type="text" class="form-control" id="formGroupExampleInput5" name="architect">
+									</div>
+								</div>
+<!--								<div class="form-group row">-->
+<!--									<label for="formGroupExampleInput6" class="col-md-4 col-form-label">Team Lead</label>-->
+<!--									<div class="col-md-8">-->
+<!--										<input type="text" class="form-control" id="formGroupExampleInput6" placeholder="Team Lead" name="tl">-->
+<!--									</div>-->
+								</div>
+								<input type="submit" class="btnRegister"  value="Submit"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<input type="submit" class="btnRegister"  value="Submit"/>-->
+	</form>
+    <script type="text/javascript" src="scripts/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="scripts/popper.min.js"></script>
+	<!--<script type="text/javascript" src="scripts/custom.js"></script>-->
+    <script type="text/javascript" src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
